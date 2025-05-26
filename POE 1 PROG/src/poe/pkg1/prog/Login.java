@@ -1,13 +1,15 @@
 package poe.pkg1.prog;
-import java.util.regex.Pattern;
-public class Login {
+
+public class Login 
+{
     private final String username;
     private final String password;
     private final String cellphone;
     private final String firstName;
     private final String lastName;
     
-    public Login(String username, String password, String cellphone, String firstName, String lastName) {
+    public Login(String username, String password, String cellphone, String firstName, String lastName)
+    {
         this.username = username;
         this.password = password;
         this.cellphone = cellphone;
@@ -15,19 +17,21 @@ public class Login {
         this.lastName = lastName;
     }
     
-    public boolean checkUserName() {
+    public boolean checkUserName() 
+    {
         return username.contains("_") && username.length() <= 5;
         
     }
     
-    public boolean checkPassowrdComplexity() {
+    public boolean checkPassowrdComplexity() 
+    {
         return password.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@$%^&*()_+//_={}:;<>?]).{8,}$");
         
     }
     
     // Cellphone validation 
-    
-    public boolean checkCellPhoneNumber() {
+    public boolean checkCellPhoneNumber()
+    {
         return cellphone.matches("^//+//d{1,3}//d{9,10}$");
     }
     
